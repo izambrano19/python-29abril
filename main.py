@@ -12,9 +12,12 @@ Entrez.email = "izambrano19@ilg.cat"
 handle = Entrez.einfo()
 record = Entrez.read(handle)
 print(record.keys())
-llista = record.keys()
-print(llista)
+#llista = record.keys()
+#print(llista)
 print(record["DbList"])
+
+llista = record['DbList']
+llista2 = record.values()
 
 for bbdd in llista:
     print(bbdd)
